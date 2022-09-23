@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.hover-slider-nav {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+.hover-slider-nav_item {
+  padding: 2vh;
+  font-size: 8vh;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.hover-slider-nav_item--active {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hover-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #000;
+  overflow: hidden;
+}
+.hover-slider_item {
+  position: absolute;
+  top: -2vh;
+  left: -2vw;
+  width: 104vw;
+  height: 104vh;
+  opacity: 0;
+  transition: 0.5s linear;
+  transform: translateY(-2vh);
+}
+.hover-slider_item--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-slider_item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
